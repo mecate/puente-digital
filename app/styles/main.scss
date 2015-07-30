@@ -10,6 +10,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // elements
 @import 'elements/image';
+@import 'elements/headings';
 
 // components
 @import 'components/brand';
@@ -20,4 +21,6 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   padding-top: 70px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
