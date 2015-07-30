@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
 // endbower
 
 // defaults
@@ -24,3 +25,5 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+
+p { line-height: 1; }

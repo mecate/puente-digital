@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.3",
     "angular": "~1.4.3",
-    "angular-youtube-mb": "~1.0.2"
+    "angular-youtube-mb": "~1.0.2",
+    "components-font-awesome": "~4.4.0"
   },
   "overrides": {
     "bootstrap-sass": {
