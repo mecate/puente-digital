@@ -1,4 +1,4 @@
-$navbar_background_color: #222;
+$navbar_background_color: $fourth_accent_color;
 $navbar_color: #fff;
 
 .navbar-default {
@@ -12,7 +12,7 @@ $navbar_color: #fff;
         background-color: transparent !important;
       }
     }
-    
+
     a.dropdown-toggle {
       color: $navbar_color !important;
     }
