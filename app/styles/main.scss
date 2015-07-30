@@ -6,9 +6,18 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // defaults
 @import 'defaults';
+@import 'colors';
 
 // elements
 @import 'elements/image';
 
 // components
+@import 'components/brand';
 @import 'components/intro';
+@import 'components/video';
+@import 'components/navbar';
+
+body {
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+}

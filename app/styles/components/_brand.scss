@@ -1,0 +1,9 @@
+.brand__name {
+  font-weight: bolder;
+  &.first {
+    color: $brand_color_1;
+  }
+    &.last {
+    color: $brand_color_2;
+  }
+}

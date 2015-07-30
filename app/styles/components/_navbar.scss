@@ -1,0 +1,21 @@
+$navbar_background_color: #222;
+$navbar_color: #fff;
+
+.navbar-default {
+  background-color: $navbar_background_color !important;
+  border: 0;
+
+  .dropdown {
+    &.open {
+      a.dropdown-toggle {
+        font-weight: bolder;
+        background-color: transparent !important;
+      }
+    }
+    
+    a.dropdown-toggle {
+      color: $navbar_color !important;
+    }
+  }
+
+}

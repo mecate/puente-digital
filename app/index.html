@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>brecha digital</title>
+    <title>Puente digital</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,300' rel='stylesheet' type='text/css'>
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
@@ -22,40 +23,75 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+  <body ng-app="PuenteDigitalApp">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Brecha digital</h3>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="brand__name first">Puente</span><span class="brand__name last">Digital</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temas <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Entretenimiento</li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Netflix</a></li>
+                <li role="separator" class="divider"></li>
+
+                <li class="dropdown-header">Herramientas digitales</li>
+                <li><a href="#">Word</a></li>
+                <li><a href="#">Excel</a></li>
+                <li role="separator" class="divider"></li>
+
+                <li class="dropdown-header">Gestión gubernamental</li>
+                <li><a href="#">Construye tu empresa</a></li>
+                <li><a href="#">Contabilidad</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </nav>
 
       <div class="intro">
-          <img class="main__image" src="/images/egghead.svg" alt="" />
-          <h2>Bite-sized video training for AngularJS, React, D3, and many other essential modern web technologies.</h2>
-          <h5>Life's too short for long boring lectures. Level up your programming skills today with condensed video lessons on industry leading web frameworks and tools!</h5>
+        <img class="main__image" src="/images/egghead.svg" alt="" />
+        <h2>Bite-sized video training for AngularJS, React, D3, and many other essential modern web technologies.</h2>
+        <h5>Life's too short for long boring lectures. Level up your programming skills today with condensed video lessons on industry leading web frameworks and tools!</h5>
       </div>
 
       <div class="container">
-        <div class="footer">
-          <p>Brecha Inc.</p>
+        <div class="content" ng-controller="MainCtrl as main">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 video" ng-repeat="video in main.videos">
+              <div class="embed-responsive embed-responsive-4by3">
+                <!-- <youtube-video class="embed-responsive-item" video-url="video.url"></youtube-video> -->
+              </div>
+              <p class="description">{{ video.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
 
-
+    <script src="https://www.youtube.com/iframe_api"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -77,6 +113,7 @@
 
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/app.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
