@@ -40,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span class="brand__name first">Puente</span><span class="brand__name last">Digital</span></a>
+          <a class="navbar-brand" href="#" style="font-size: 28px;"><span class="brand__name first">Puente</span><span class="brand__name last">Digital</span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -75,8 +75,17 @@
 
       <div class="container">
         <div class="content" ng-controller="MainCtrl as main">
+          <div class="row" style="margin-bottom:15px;">
+            <div class="col-xs-12">
+
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <input type="text" class="form-control" name="name" placeholder="Escribe lo que te interesa aprender el día de hoy." ng-model="main.videoFilter">
+              </div>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 video" ng-repeat="video in main.videos">
+            <div class="col-xs-12 col-sm-6 col-md-4 video" ng-repeat="video in main.videos | filter: main.videoFilter">
               <div class="embed-responsive embed-responsive-4by3">
                 <youtube-video class="embed-responsive-item" video-url="video.url"></youtube-video>
               </div>
