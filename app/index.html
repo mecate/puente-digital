@@ -68,12 +68,41 @@
     </nav>
 
       <div class="intro">
-        <img class="main__image" src="/images/landing_image.png" alt="" />
-        <h2>Video entrenamiento en contabilidad, marketing, gestión gubernamental y otros temas relacionados a tu negocio.</h2>
-        <h5>La vida es demasiado corta para lecturas largas y aburridas. Sube de nivel con lecciones de videos condensadas por líderes de la industria.</h5>
+        <div class="container">
+          <!-- <img class="main__image" src="/images/landing_image.png" alt="" /> -->
+          <youtube-video class="embed-responsive-item main__video" video-url="'https://www.youtube.com/watch?v=QADSH8XYx_A'"></youtube-video>
+          <h2>Help everyone get connected</h2>
+          <h5>Level up with video lessons by industry leaders.</h5>
+        </div>
       </div>
 
       <div class="container">
+        <div class="row key__categories">
+          <div class="col-xs-12 col-md-4">
+            <div class="category">
+              <i class="fa fa-play-circle fa-5x"></i>
+              <h3>Entertainment</h3>
+              <p>Learn how to take your first digital steps  using these resources about online entertainment.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+            <div class="category">
+              <i class="fa fa-wrench fa-5x"></i>
+              <h3>Productivity</h3>
+              <p>Small business owner? Find out how to get started with a web presence, reach new customers or transact online.</p>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4">
+            <div class="category">
+              <i class="fa fa-building fa-5x"></i>
+              <h3>Business</h3>
+              <p>Understand business law and regulations in an easy way.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="content" ng-controller="MainCtrl as main">
           <div class="row" style="margin-bottom:15px;">
             <div class="col-xs-12">
