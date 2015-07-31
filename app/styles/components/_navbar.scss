@@ -1,9 +1,15 @@
-$navbar_background_color: $fourth_accent_color;
+$navbar_background_color: $main_accent_color;
 $navbar_color: #fff;
 
 .navbar-default {
   background-color: $navbar_background_color !important;
   border: 0;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+
+  li > a {
+    color: $navbar_color !important;
+  }
 
   .dropdown {
     &.open {

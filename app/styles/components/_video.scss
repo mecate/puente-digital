@@ -1,8 +1,24 @@
+$first_category_color: #03658C;
+$second_category_color: #049DBF;
+$third_category_color: #39B28F;
+
 .video {
   color: $first_accent_color;
   margin-bottom: 30px;
 }
 
 .embed-responsive { margin-bottom: 15px; }
+
+.category {
+  color: #fff !important;
+  &.first { background-color: $first_category_color; }
+  &.second { background-color: $second_category_color; }
+  &.third { background-color: $third_category_color; }
+
+  h3, p {
+    color: #fff !important;
+  }
+}
+
 
 p.category { font-weight: bold; }
